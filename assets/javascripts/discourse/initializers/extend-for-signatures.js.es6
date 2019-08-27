@@ -12,6 +12,7 @@ function attachSignature(api, siteSettings) {
 
     const currentUser = api.getCurrentUser();
     if (currentUser) {
+      console.log("uid: " + user.external_id);
       const enabled = currentUser.get("custom_fields.see_signatures");
       if (enabled) {
         if (siteSettings.signatures_advanced_mode) {
